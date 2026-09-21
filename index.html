@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driftwater: First-Person Fishing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="game" aria-label="Driftwater first-person fishing game">
+    <canvas id="scene"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">DRIFTWATER FISHING CO.</p>
+        <h1>Driftwater</h1>
+      </div>
+      <div class="weather"><span id="weatherIcon">☀</span> <span id="weatherText">clear water</span></div>
+    </header>
+
+    <section class="hud-card stats" aria-live="polite">
+      <div><span>TIME</span><strong id="time">06:00</strong></div>
+      <div><span>DEPTH</span><strong id="depth">12.4 m</strong></div>
+      <div><span>CATCH</span><strong id="catchCount">0 kg</strong></div>
+    </section>
+
+    <section class="hud-card message" id="message">I ease the throttle forward and listen to the hull cut the water.</section>
+
+    <section class="controls" aria-label="Game controls">
+      <button id="castBtn" class="primary">CAST LINE <kbd>SPACE</kbd></button>
+      <button id="reelBtn">REEL IN <kbd>R</kbd></button>
+      <button id="throttleBtn">THROTTLE <kbd>W</kbd></button>
+      <button id="lookBtn">LOOK AROUND <kbd>A/D</kbd></button>
+    </section>
+
+    <div class="rod" aria-hidden="true"><div class="rod-tip"></div><div class="line"></div></div>
+    <div class="crosshair" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <section class="journal hud-card">
+      <div class="journal-title"><span>CAPTAIN'S LOG</span><span id="fishStatus">LINE DRY</span></div>
+      <p id="journalText">I am alone on my little boat, with a thermos by my boot and a whole lake to read.</p>
+      <div class="progress"><span id="tensionBar"></span></div>
+    </section>
+    <p class="hint">I move with <b>WASD</b> · I cast with <b>SPACE</b> · I reel with <b>R</b> · I pause with <b>ESC</b></p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
